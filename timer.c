@@ -1,4 +1,5 @@
-#include "mma8451q.h"
+#include "MKL46Z4.h"
+#include "timer.h"
 
 //	SYSTICK
 uint32_t SysTick_Configuration (uint32_t ticks){
