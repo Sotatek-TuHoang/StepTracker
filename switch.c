@@ -33,7 +33,6 @@ void sw3_cb(void)
 {
 	if((PTC -> PDIR & (1<<12)) == 0)
 	{
-		active_flag = 0;
 		step_count = 0;
 		SegLCD_DisplayDecimal(0);
 	}

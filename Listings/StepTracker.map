@@ -60,7 +60,6 @@ Section Cross References
     switch.o(i.sw1_init) refers to switch.o(i.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
     switch.o(i.sw1_init) refers to switch.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
     switch.o(i.sw3_cb) refers to lcd.o(i.SegLCD_DisplayDecimal) for SegLCD_DisplayDecimal
-    switch.o(i.sw3_cb) refers to switch.o(.data) for active_flag
     switch.o(i.sw3_cb) refers to main.o(.data) for step_count
     switch.o(i.sw3_init) refers to switch.o(i.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
     switch.o(i.sw3_init) refers to switch.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
@@ -430,15 +429,15 @@ Image Symbol Table
     i.sw1_cb                                 0x00001344   Section        0  switch.o(i.sw1_cb)
     i.sw1_init                               0x00001378   Section        0  switch.o(i.sw1_init)
     i.sw3_cb                                 0x000013d4   Section        0  switch.o(i.sw3_cb)
-    i.sw3_init                               0x00001400   Section        0  switch.o(i.sw3_init)
-    x$fpl$fleqf                              0x0000145c   Section       84  flef.o(x$fpl$fleqf)
-    x$fpl$fmul                               0x000014b0   Section      176  fmul.o(x$fpl$fmul)
-    x$fpl$frleqf                             0x00001560   Section       88  frlef.o(x$fpl$frleqf)
-    .constdata                               0x000015b8   Section        8  lcd.o(.constdata)
-    x$fpl$usenofp                            0x000015b8   Section        0  usenofp.o(x$fpl$usenofp)
-    LCD_Frontplane_Pin                       0x000015b8   Data           8  lcd.o(.constdata)
-    .constdata                               0x000015c0   Section       64  fdiv.o(.constdata)
-    fdiv_tab                                 0x000015c0   Data          64  fdiv.o(.constdata)
+    i.sw3_init                               0x000013f8   Section        0  switch.o(i.sw3_init)
+    x$fpl$fleqf                              0x00001454   Section       84  flef.o(x$fpl$fleqf)
+    x$fpl$fmul                               0x000014a8   Section      176  fmul.o(x$fpl$fmul)
+    x$fpl$frleqf                             0x00001558   Section       88  frlef.o(x$fpl$frleqf)
+    .constdata                               0x000015b0   Section        8  lcd.o(.constdata)
+    x$fpl$usenofp                            0x000015b0   Section        0  usenofp.o(x$fpl$usenofp)
+    LCD_Frontplane_Pin                       0x000015b0   Data           8  lcd.o(.constdata)
+    .constdata                               0x000015b8   Section       64  fdiv.o(.constdata)
+    fdiv_tab                                 0x000015b8   Data          64  fdiv.o(.constdata)
     .data                                    0x1fffe000   Section       22  main.o(.data)
     .data                                    0x1fffe016   Section        1  switch.o(.data)
     .data                                    0x1fffe018   Section       16  timer.o(.data)
@@ -629,17 +628,17 @@ Image Symbol Table
     mma8451q_set                             0x000012c9   Thumb Code   102  mma8451q.o(i.mma8451q_set)
     sw1_cb                                   0x00001345   Thumb Code    44  switch.o(i.sw1_cb)
     sw1_init                                 0x00001379   Thumb Code    78  switch.o(i.sw1_init)
-    sw3_cb                                   0x000013d5   Thumb Code    30  switch.o(i.sw3_cb)
-    sw3_init                                 0x00001401   Thumb Code    80  switch.o(i.sw3_init)
-    __aeabi_cfcmple                          0x0000145d   Thumb Code     0  flef.o(x$fpl$fleqf)
-    _fcmple                                  0x0000145d   Thumb Code    78  flef.o(x$fpl$fleqf)
-    __aeabi_fmul                             0x000014b1   Thumb Code     0  fmul.o(x$fpl$fmul)
-    _fmul                                    0x000014b1   Thumb Code   172  fmul.o(x$fpl$fmul)
-    __aeabi_cfrcmple                         0x00001561   Thumb Code     0  frlef.o(x$fpl$frleqf)
-    _frcmple                                 0x00001561   Thumb Code    84  frlef.o(x$fpl$frleqf)
-    __I$use$fp                               0x000015b8   Number         0  usenofp.o(x$fpl$usenofp)
-    Region$$Table$$Base                      0x00001600   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00001620   Number         0  anon$$obj.o(Region$$Table)
+    sw3_cb                                   0x000013d5   Thumb Code    26  switch.o(i.sw3_cb)
+    sw3_init                                 0x000013f9   Thumb Code    80  switch.o(i.sw3_init)
+    __aeabi_cfcmple                          0x00001455   Thumb Code     0  flef.o(x$fpl$fleqf)
+    _fcmple                                  0x00001455   Thumb Code    78  flef.o(x$fpl$fleqf)
+    __aeabi_fmul                             0x000014a9   Thumb Code     0  fmul.o(x$fpl$fmul)
+    _fmul                                    0x000014a9   Thumb Code   172  fmul.o(x$fpl$fmul)
+    __aeabi_cfrcmple                         0x00001559   Thumb Code     0  frlef.o(x$fpl$frleqf)
+    _frcmple                                 0x00001559   Thumb Code    84  frlef.o(x$fpl$frleqf)
+    __I$use$fp                               0x000015b0   Number         0  usenofp.o(x$fpl$usenofp)
+    Region$$Table$$Base                      0x000015f8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001618   Number         0  anon$$obj.o(Region$$Table)
     x                                        0x1fffe000   Data           4  main.o(.data)
     y                                        0x1fffe004   Data           4  main.o(.data)
     z                                        0x1fffe008   Data           4  main.o(.data)
@@ -664,7 +663,7 @@ Memory Map of the image
 
   Image Entry point : 0x000004b5
 
-  Load Region LR_m_text (Base: 0x00000000, Size: 0x0000164c, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_m_text (Base: 0x00000000, Size: 0x00001644, Max: 0x00040000, ABSOLUTE)
 
     Execution Region VECTOR_ROM (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000000c0, Max: 0x00000200, ABSOLUTE)
 
@@ -680,7 +679,7 @@ Memory Map of the image
     0x00000400   0x00000400   0x00000010   Data   RO          373    FlashConfig         startup_mkl46z4.o
 
 
-    Execution Region ER_m_text (Exec base: 0x00000410, Load base: 0x00000410, Size: 0x00001210, Max: 0x0003fbf0, ABSOLUTE)
+    Execution Region ER_m_text (Exec base: 0x00000410, Load base: 0x00000410, Size: 0x00001208, Max: 0x0003fbf0, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -781,37 +780,37 @@ Memory Map of the image
     0x00001342   0x00001342   0x00000002   PAD
     0x00001344   0x00001344   0x00000034   Code   RO          262    i.sw1_cb            switch.o
     0x00001378   0x00001378   0x0000005c   Code   RO          263    i.sw1_init          switch.o
-    0x000013d4   0x000013d4   0x0000002c   Code   RO          264    i.sw3_cb            switch.o
-    0x00001400   0x00001400   0x0000005c   Code   RO          265    i.sw3_init          switch.o
-    0x0000145c   0x0000145c   0x00000054   Code   RO          445    x$fpl$fleqf         fz_ps.l(flef.o)
-    0x000014b0   0x000014b0   0x000000b0   Code   RO          447    x$fpl$fmul          fz_ps.l(fmul.o)
-    0x00001560   0x00001560   0x00000058   Code   RO          449    x$fpl$frleqf        fz_ps.l(frlef.o)
-    0x000015b8   0x000015b8   0x00000000   Code   RO          458    x$fpl$usenofp       fz_ps.l(usenofp.o)
-    0x000015b8   0x000015b8   0x00000008   Data   RO          112    .constdata          lcd.o
-    0x000015c0   0x000015c0   0x00000040   Data   RO          439    .constdata          fz_ps.l(fdiv.o)
-    0x00001600   0x00001600   0x00000020   Data   RO          636    Region$$Table       anon$$obj.o
+    0x000013d4   0x000013d4   0x00000024   Code   RO          264    i.sw3_cb            switch.o
+    0x000013f8   0x000013f8   0x0000005c   Code   RO          265    i.sw3_init          switch.o
+    0x00001454   0x00001454   0x00000054   Code   RO          445    x$fpl$fleqf         fz_ps.l(flef.o)
+    0x000014a8   0x000014a8   0x000000b0   Code   RO          447    x$fpl$fmul          fz_ps.l(fmul.o)
+    0x00001558   0x00001558   0x00000058   Code   RO          449    x$fpl$frleqf        fz_ps.l(frlef.o)
+    0x000015b0   0x000015b0   0x00000000   Code   RO          458    x$fpl$usenofp       fz_ps.l(usenofp.o)
+    0x000015b0   0x000015b0   0x00000008   Data   RO          112    .constdata          lcd.o
+    0x000015b8   0x000015b8   0x00000040   Data   RO          439    .constdata          fz_ps.l(fdiv.o)
+    0x000015f8   0x000015f8   0x00000020   Data   RO          636    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_m_data (Exec base: 0x1fffe000, Load base: 0x00001620, Size: 0x00000038, Max: 0x00007800, ABSOLUTE)
+    Execution Region RW_m_data (Exec base: 0x1fffe000, Load base: 0x00001618, Size: 0x00000038, Max: 0x00007800, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fffe000   0x00001620   0x00000016   Data   RW           10    .data               main.o
-    0x1fffe016   0x00001636   0x00000001   Data   RW          266    .data               switch.o
-    0x1fffe017   0x00001637   0x00000001   PAD
-    0x1fffe018   0x00001638   0x00000010   Data   RW          330    .data               timer.o
-    0x1fffe028   0x00001648   0x00000004   Data   RW          383    .data               system_mkl46z4.o
+    0x1fffe000   0x00001618   0x00000016   Data   RW           10    .data               main.o
+    0x1fffe016   0x0000162e   0x00000001   Data   RW          266    .data               switch.o
+    0x1fffe017   0x0000162f   0x00000001   PAD
+    0x1fffe018   0x00001630   0x00000010   Data   RW          330    .data               timer.o
+    0x1fffe028   0x00001640   0x00000004   Data   RW          383    .data               system_mkl46z4.o
     0x1fffe02c        -       0x0000000c   Zero   RW            9    .bss                main.o
 
 
-    Execution Region ARM_LIB_HEAP (Exec base: 0x1fffe038, Load base: 0x0000164c, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region ARM_LIB_HEAP (Exec base: 0x1fffe038, Load base: 0x00001644, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x1fffe038        -       0x00000400   Zero   RW            1    ARM_LIB_HEAP.bss    anon$$obj.o
 
 
-    Execution Region ARM_LIB_STACK (Exec base: 0x20005c00, Load base: 0x0000164c, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region ARM_LIB_STACK (Exec base: 0x20005c00, Load base: 0x00001644, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -830,12 +829,12 @@ Image component sizes
        312         58          0         22         12     283128   main.o
        680         12          0          0          0       3475   mma8451q.o
        156         70        208          0          0       1148   startup_mkl46z4.o
-       484         80          0          1          0      11202   switch.o
+       476         76          0          1          0      11198   switch.o
         22          6          0          4          0       1068   system_mkl46z4.o
        136         26          0         16          0       1813   timer.o
 
     ----------------------------------------------------------------------
-      2872        348        248         44       2060     305934   Object Totals
+      2864        344        248         44       2060     305930   Object Totals
          0          0         32          0       2048          0   (incl. Generated)
          6          0          0          1          0          0   (incl. Padding)
 
@@ -894,15 +893,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4520        396        312         44       2060     305338   Grand Totals
-      4520        396        312         44       2060     305338   ELF Image Totals
-      4520        396        312         44          0          0   ROM Totals
+      4512        392        312         44       2060     305334   Grand Totals
+      4512        392        312         44       2060     305334   ELF Image Totals
+      4512        392        312         44          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 4832 (   4.72kB)
+    Total RO  Size (Code + RO Data)                 4824 (   4.71kB)
     Total RW  Size (RW Data + ZI Data)              2104 (   2.05kB)
-    Total ROM Size (Code + RO Data + RW Data)       4876 (   4.76kB)
+    Total ROM Size (Code + RO Data + RW Data)       4868 (   4.75kB)
 
 ==============================================================================
 

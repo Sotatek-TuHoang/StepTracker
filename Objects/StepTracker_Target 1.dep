@@ -1,5 +1,5 @@
 Dependencies for Project 'StepTracker', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x65FBD6CF)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x65FC22EC)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
 I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
@@ -49,7 +49,7 @@ I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
 I (I2C.h)(0x584B7653)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EE94E)
 F (.\mma8451q.h)(0x65FB35A8)()
-F (.\switch.c)(0x65FBD745)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\switch.o --omf_browse .\objects\switch.crf --depend .\objects\switch.d)
+F (.\switch.c)(0x65FC23C3)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\switch.o --omf_browse .\objects\switch.crf --depend .\objects\switch.d)
 I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
 I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
