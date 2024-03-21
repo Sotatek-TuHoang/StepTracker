@@ -1,0 +1,146 @@
+#include "MKL46Z4.h"                    // Device header
+#include "mag.h"
+#include "lcd.h"
+#include "math.h"
+#include "stdlib.h"
+#include "string.h"
+//#include "initial.h"
+
+#include "mma8451q.h"
+
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
+
+short xread = 0, yread = 0, zread = 0;
+float x = 0, y = 0, z = 0, mag = 0;
+int  magINT = 0;
+int xoff = 0, yoff = 0, zoff = 0;
+
+
+
+//	SYSTICK
+uint32_t SysTick_Configuration (uint32_t ticks){
+	SysTick->LOAD  = ticks -1;                                  /* set reload register */
+	NVIC_SetPriority(SysTick_IRQn, (1<<4) -1);  /* set Priority for SystickInterrupt */
+	SysTick->VAL   = 0;                                          /* Load theSysTickCounter Value */
+	SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk|
+	SysTick_CTRL_TICKINT_Msk |
+	SysTick_CTRL_ENABLE_Msk;                 /* Enable SysTickIRQ and SysTickTimer */
+	return (0);                                                  /* Function successful */
+}
+int32_t volatile msTicks = 0; // Interval counter in ms
+int32_t volatile msTicksInDelay = 0;
+void init_SysTick_interrupt(){
+	SysTick->LOAD = SystemCoreClock/ 1000; //configured the SysTickto count in 1ms
+	/* Select Core Clock & Enable SysTick& Enable Interrupt */
+	SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk|SysTick_CTRL_TICKINT_Msk|SysTick_CTRL_ENABLE_Msk;
+}
+unsigned long long tinhthoigian = 0;	//	Increasing second
+long long SysTick_Handler(void) { // SysTickinterrupt Handler
+	msTicks++; // Increment counter 
+	msTicksInDelay++;
+	if(msTicks == 1000){
+		tinhthoigian++;
+		msTicks = 0;
+	}
+	return tinhthoigian;
+}
+void Delay (uint32_t TICK) { 
+	msTicksInDelay = 0;
+	while (msTicksInDelay < TICK); // Wait TICK ms 
+	msTicksInDelay = 0; // Reset counter 
+}
+
+
+void DisplayCurrentMag();
+
+
+void initial(){
+
+	SegLCD_Init();
+	mag_init();
+	
+
+	init_SysTick_interrupt();
+		
+	
+	//mag_calib(&xoff, &yoff, &zoff);
+}
+
+
+
+void SystemClockConfiguration(void)
+{
+		/*System clock = 41.94 MHz*/
+    /* OUTDIV4 = 2: Bus clock = system clock / 3*/
+    SIM->CLKDIV1 = (uint32_t)0x00020000UL; /* Update system prescalers */
+    
+    /* Switch to FEI Mode */
+    MCG->C1 = (uint8_t)0x06U; 															//  MCG->C1: CLKS=0,FRDIV=0,IREFS=1,IRCLKEN=1,IREFSTEN=0  => 00000110b ~ 0x06 => Select using source clock in FLL bacause using MCGOOUTCLK
+
+    MCG->C2 &= (uint8_t)0x00;																// MCG_C2: LOCRE0=0,FCFTRIM=0,RANGE0=0,HGO0=0,EREFS0=0,LP=0,IRCS=0
+
+    MCG->C4 = (uint8_t)(MCG->C4 & 0x20U);										// MCG->C4: DMX32=0, DRST_DRS=1 => output frequency is 40 - 50 MHz
+   
+    OSC0->CR = (uint8_t)0x00U;															// OSC0->CR:ERCLKEN=1, EREFSTEN=0, SC2P=0,SC4P=0,SC8P=0,SC16P=0
+
+    MCG->C5 = (uint8_t)0x00U; 															// MCG->C5: x=0,PLLCLKEN0=0,PLLSTEN0=0,PRDIV0=0
+    
+    MCG->C6 = (uint8_t)0x00U;																// MCG->C6: LOLIE0=0,PLLS=0,CME0=0,VDIV0=0
+    
+    while((MCG->S & MCG_S_IREFST_MASK) == 0x00U)
+    {
+        /* Check that the source of the FLL reference clock is the internal reference clock. */
+    }
+    
+    while((MCG->S & 0x0CU) != 0x00U)
+    {
+        /* Wait until output of the FLL is selected */
+    }
+}
+
+int main(){
+	SystemClockConfiguration();
+	initial();
+	while(1){
+		DisplayCurrentMag();
+
+	}
+	return 0;
+}
+
+void DisplayCurrentMag(){
+//	 make LCD display mag's value with 4 digits
+		
+		if((mag_read(0x00)&0xf) != 0){
+			xread   = mag_read(0x01)<<8;
+			xread  |= mag_read(0x02);
+
+			yread   = mag_read(0x03)<<8;
+			yread  |= mag_read(0x04);
+
+			zread   = mag_read(0x05)<<8;
+			zread  |= mag_read(0x06);
+			Delay(100);
+		}
+		
+		x = (float)xread/100.0;
+		y = (float)yread/100.0;
+		z = (float)zread/100.0;
+		mag = sqrt(pow(x,2) + pow(y, 2) + pow(z, 2));
+		mag = mag*10.0;
+		mag = (mag > (floor(mag)+0.5)) ? ceil(mag) : floor(mag);
+
+		magINT = mag;
+
+
+
+		
+		SegLCD_DisplayDecimal(magINT);
+		
+		SegLCD_DP3_On();
+
+		
+}
+	
+

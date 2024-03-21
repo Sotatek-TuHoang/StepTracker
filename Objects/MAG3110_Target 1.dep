@@ -1,0 +1,76 @@
+Dependencies for Project 'MAG3110', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x65FB0E48)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
+I (mag.h)(0x584ED051)
+I (I2C.h)(0x584B7653)
+I (lcd.h)(0x584FFB03)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EE94E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EE94C)
+I (mma8451q.h)(0x65F0C304)
+F (.\lcd.c)(0x584FFAF6)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
+I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
+I (LCD.h)(0x584FFB03)
+F (.\mag.c)(0x584ED178)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\mag.o --omf_browse .\objects\mag.crf --depend .\objects\mag.d)
+I (mag.h)(0x584ED051)
+I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
+I (I2C.h)(0x584B7653)
+F (.\lcd.h)(0x584FFB03)()
+F (.\mag.h)(0x584ED051)()
+F (.\I2C.c)(0x584ED16B)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+I (I2C.h)(0x584B7653)
+I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
+F (.\I2C.h)(0x584B7653)()
+F (.\mma8451q.c)(0x65F0C2F6)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\mma8451q.o --omf_browse .\objects\mma8451q.crf --depend .\objects\mma8451q.d)
+I (mma8451q.h)(0x65F0C304)
+I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
+I (I2C.h)(0x584B7653)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EE94E)
+F (.\mma8451q.h)(0x65F0C304)()
+F (RTE\Device\MKL46Z256VLL4\MKL46Z256xxx4_flash.scf)(0x5B4EA80E)()
+F (RTE\Device\MKL46Z256VLL4\MKL46Z256xxx4_ram.scf)(0x5B4EA80E)()
+F (RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)()
+F (RTE\Device\MKL46Z256VLL4\MKL46Z4_features.h)(0x5B4EA80E)()
+F (RTE\Device\MKL46Z256VLL4\fsl_device_registers.h)(0x5B4EA80E)()
+F (RTE\Device\MKL46Z256VLL4\startup_MKL46Z4.s)(0x5B4EA80E)(--cpu Cortex-M0+ -g --apcs=interwork -I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1" --pd "CPU_MKL46Z256VLL4 SETA 1"--list .\listings\startup_mkl46z4.lst --xref -o .\objects\startup_mkl46z4.o --depend .\objects\startup_mkl46z4.d)
+F (RTE\Device\MKL46Z256VLL4\system_MKL46Z4.c)(0x5B4EA80E)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="526" -D_RTE_ -DCPU_MKL46Z256VLL4-o .\objects\system_mkl46z4.o --omf_browse .\objects\system_mkl46z4.crf --depend .\objects\system_mkl46z4.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EE94E)
+I (RTE\Device\MKL46Z256VLL4\fsl_device_registers.h)(0x5B4EA80E)
+I (RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x5B4EA80E)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617E94)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F4CA4)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5851D6)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617E94)
+I (RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)
+I (RTE\Device\MKL46Z256VLL4\MKL46Z4_features.h)(0x5B4EA80E)
+F (RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x5B4EA80E)()
